@@ -1,11 +1,23 @@
-export default function Player({name, symbol}) {
+import { useState } from "react";
+
+export default function Player({ name, symbol }) {
+    const [isEditing, setIsEditing] = useState(false);
+    let content = <span className="player-name">{name}</span>
+
+    const nameEditHandler = () => {
+        setIsEditing(true);
+    }
+    if (isEditing === true) {
+        content = <input type="text" />
+    }
+
     return (
         <li>
             <span className="player">
-                <span className="player-name">{name}</span>
+                {content}
                 <span className="player-symbol">{symbol}</span>
             </span>
-            <button>Edit</button>
+            <button onClick={nameEditHandler}>Edit</button>
         </li>
     );
 }
