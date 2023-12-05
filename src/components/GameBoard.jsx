@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 const initialGameBoard = [
     [null, null, null],
     [null, null, null],
     [null, null, null]
 ];
 export default function GameBoard() {
+    useState(initialGameBoard);
+
     return (
         <ol id="game-board">
             {initialGameBoard.map((row, rowIndex) => (
