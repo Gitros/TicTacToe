@@ -13,8 +13,6 @@ export default function GameBoard({ onSelectSquare, turns }) {
         gameBoard[row][col] = player;
     }
 
-    // const [gameBoard, setGameBoard] = useState(initialGameBoard);
-
     // function handleSelectSquare(rowIndex, colIndex) {
     //     setGameBoard((prevGameBoard) => {
     //         const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])]
